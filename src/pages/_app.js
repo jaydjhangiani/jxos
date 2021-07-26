@@ -1,7 +1,12 @@
-import '@styles/globals.css'
+import Theme from '../styles/theme';
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Theme>
+        <Component {...pageProps} />
+      </Theme>
+    </>
+  );
 }
-
-export default Application
+ 

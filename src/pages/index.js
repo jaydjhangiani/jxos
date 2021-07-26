@@ -1,23 +1,25 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Acomplishments from '../components/Acomplishments/Acomplishments';
+import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation';
+import Hero from '../components/Hero/Hero';
+import Projects from '../components/Projects/Projects';
+import Technologies from '../components/Technologies/Technologies';
+import Timeline from '../components/TimeLine/TimeLine';
+import { Layout } from '../layout/Layout';
+import { Section } from '../styles/GlobalComponents';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className="container">
-      <Head>
-        <title>Next.js Starter!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      {/* <Section grid> */}
+        <Hero />
+        {/* <BgAnimation /> */}
+      {/* </Section> */}
+      <Projects />
+      <Technologies />
+      <Timeline />
+      <Acomplishments />
+    </Layout>
+  );
+};
 
-      <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-      </main>
-
-      <Footer />
-    </div>
-  )
-}
+export default Home;
